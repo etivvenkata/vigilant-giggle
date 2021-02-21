@@ -43,12 +43,12 @@ jobs:
         
 
       - run: "cd; git clone https://github.com/etivvenkata/etivvenkata.github.io.git ; ls ; pwd"
-      - run: "sudo cp /home/circleci/project/giggle  /etivvenkata.github.io"
+      - run: "sudo cp /home/circleci/project/giggle  /home/circleci/etivvenkata.github.io"
       - run: "git config --global user.name 'etivvenkata'"
       - run: "git config --global user.email 'etivvenkata@gmail.com'"
       - run: "cd  /home/circleci/etivvenkata.github.io; ls"
      
-      - run: "pwd; ./giggle > index.html"
+      - run: " ./giggle > index.html"
       - run: "git add --all; git commit -m 'code changes'; git push  origin circleci-project-setup"
 
       
