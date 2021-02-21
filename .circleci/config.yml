@@ -43,11 +43,11 @@ jobs:
       - run: "sudo mkdir Venkata; pwd"    
 
       - run: "cd /home/circleci/project; git clone https://github.com/etivvenkata/etivvenkata.github.io.git ; ls ; pwd"
-      - run: "sudo cp /giggle-1.0_amd64.deb /home/circleci/etivvenkata.github.io"
+      - run: "sudo cp /giggle-1.0_amd64.deb /home/circleci/project/etivvenkata.github.io"
       - run: "git config --global user.name 'etivvenkata'"
       - run: "git config --global user.email 'etivvenkata@gmail.com'"
-      - run: "cd  /home/circleci/etivvenkata.github.io"
-      - run: "sudo dpkg -i /home/circleci/etivvenkata.github.io/giggle-1.0_amd64.deb"
+      - run: "cd  /home/circleci/project/etivvenkata.github.io"
+      - run: "sudo dpkg -i /home/circleci/project/etivvenkata.github.io/giggle-1.0_amd64.deb"
       - run: "./giggle > index.html"
       - run: "git add --all; git commit -m 'code changes' ; git push  "
 
