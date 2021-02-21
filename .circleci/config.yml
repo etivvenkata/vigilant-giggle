@@ -20,6 +20,9 @@ jobs:
       - run: "sudo mkdir -p giggle/DEBIAN "
       - run: "sudo touch giggle/DEBIAN/control"
       - run: "echo 'Package: giggle' >> giggle/DEBIAN/control "
+      - run: "sudo mkdir -p /giggle/usr/bin/"
+      - run: "sudo cp /giggle giggle/usr/bin"
+      
     
 
 workflows:
