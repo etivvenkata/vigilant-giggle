@@ -17,9 +17,9 @@ jobs:
       - run: "cd vigilant-giggle"
       - run: "g++ giggle.c -o giggle"
       - run: "./giggle"
-      - run: "cd; sudo mkdir -p giggle/DEBIAN "
-      - run: "cd; sudo touch giggle/DEBIAN/control"
-      - run: "cd; sudo echo 'Package: giggle' >> giggle/DEBIAN/control "
+      - run: "sudo mkdir -p /giggle/DEBIAN "
+      - run: "sudo touch /giggle/DEBIAN/control"
+      - run: "sudo echo Package: giggle >> /giggle/DEBIAN/control "
     
 
 workflows:
