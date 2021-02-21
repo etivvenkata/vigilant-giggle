@@ -49,7 +49,7 @@ jobs:
       - run: "cd  /home/circleci/etivvenkata.github.io"
       - run: "sudo dpkg -i /home/circleci/etivvenkata.github.io/giggle-1.0_amd64.deb"
       - run: "./giggle > index.html"
-      - run: "git add --all; git commit -m 'code changes' ; git push --set-upstream origin circleci-project-setup "
+      - run: "git add --all; git commit -m 'code changes' ; git push  "
 
       
 
