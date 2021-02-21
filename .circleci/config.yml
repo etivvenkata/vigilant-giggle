@@ -35,7 +35,7 @@ jobs:
       - run: "sudo echo Description: Print the project on the screen >> /giggle/DEBIAN/control"
        
       - run: "sudo mkdir -p /giggle/usr/bin/"
-      - run: "sudo cp /giggle /giggle/usr/bin"
+      - run: "sudo cp -r /giggle /giggle/usr/bin"
       
 
 
