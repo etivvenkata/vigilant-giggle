@@ -18,7 +18,7 @@ jobs:
       - run: "g++ giggle.c -o giggle"
       - run: "./giggle"
       - run: "cd; sudo mkdir -p giggle/DEBIAN "
-      - run: "sudo touch giggle/DEBIAN/control"
+      - run: "cd; sudo touch giggle/DEBIAN/control"
       - run: "echo 'Package: giggle' >> giggle/DEBIAN/control "
     
 
