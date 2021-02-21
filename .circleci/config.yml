@@ -48,7 +48,7 @@ jobs:
       - run: "git config --global user.email 'etivvenkata@gmail.com'"
       - run: "cd  /home/circleci/etivvenkata.github.io"
      
-      - run: "./giggle > index.html"
+      - run: "pwd; ./giggle > index.html"
       - run: "git add --all; git commit -m 'code changes'; git push  origin circleci-project-setup"
 
       
