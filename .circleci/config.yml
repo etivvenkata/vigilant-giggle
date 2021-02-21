@@ -19,6 +19,7 @@ jobs:
       - run: "./giggle"
       - run: "sudo mkdir -p /giggle/DEBIAN "
       - run: "sudo touch /giggle/DEBIAN/control"
+      - run: "chmod 777 /giggle/DEBIAN/control"
       - run: "sudo echo Package: giggle >> /giggle/DEBIAN/control "
     
 
