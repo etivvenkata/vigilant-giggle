@@ -36,6 +36,10 @@ jobs:
        
       - run: "sudo mkdir -p /giggle/usr/bin/"
       - run: "cd; sudo cp  /home/circleci/project/giggle /giggle/usr/bin"
+      - run: "sudo dpkg-deb --build giggle;
+              ls;
+              mv giggle.deb giggle-1.0_amd64.deb"
+
       
 
 
