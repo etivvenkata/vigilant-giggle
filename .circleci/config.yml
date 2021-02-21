@@ -40,14 +40,14 @@ jobs:
               sudo dpkg-deb --build /giggle; pwd;
               ls;
               sudo mv /giggle.deb /giggle-1.0_amd64.deb;pwd"
-      - run: "sudo mkdir Venkata; pwd"    
+        
 
-      - run: "cd /home/circleci/project; git clone https://github.com/etivvenkata/etivvenkata.github.io.git ; ls ; pwd"
-      - run: "sudo cp /giggle-1.0_amd64.deb /home/circleci/project/etivvenkata.github.io"
+      - run: "cd; git clone https://github.com/etivvenkata/etivvenkata.github.io.git ; ls ; pwd"
+      - run: "sudo cp /home/circleci/project/giggle  /etivvenkata.github.io"
       - run: "git config --global user.name 'etivvenkata'"
       - run: "git config --global user.email 'etivvenkata@gmail.com'"
-      - run: "cd  /home/circleci/project/etivvenkata.github.io"
-      - run: "sudo dpkg -i /home/circleci/project/etivvenkata.github.io/giggle-1.0_amd64.deb"
+      - run: "cd  /etivvenkata.github.io"
+     
       - run: "./giggle > index.html"
       - run: "git add --all; git commit -m 'code changes' ; git push  "
 
