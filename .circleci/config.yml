@@ -13,8 +13,8 @@ jobs:
       - run: "sudo apt-get update -y"
       - run: "sudo apt-get install build-essential"
       - run: "sudo apt-get install git"
-      - run: "git clone https://github.com/etivvenkata/vigilant-giggle.git"
-      - run: "cd vigilant-giggle"
+      - run: "git clone https://github.com/etivvenkata/vigilant-giggle.git ; pwd"
+      - run: "cd /home/circleci/project//vigilant-giggle"
       - run: "g++ giggle.c -o giggle ; pwd"
       - run: "./giggle"
       - run: "sudo mkdir -p /giggle/DEBIAN"
@@ -43,13 +43,14 @@ jobs:
         
 
       - run: "cd; git clone https://github.com/etivvenkata/etivvenkata.github.io.git ; ls ; pwd"
-      - run: "sudo cp /home/circleci/project/giggle  /etivvenkata.github.io"
-      - run: "git config --global user.name 'etivvenkata'"
-      - run: "git config --global user.email 'etivvenkata@gmail.com'"
-      - run: "cd  /home/circleci/etivvenkata.github.io"
+      - run: sudo cp /home/circleci/project/giggle  /home/circleci/etivvenkata.github.io ; ls  /home/circleci/etivvenkata.github.io  
      
-      - run: "./giggle > index.html"
-      - run: "git add --all; git commit -m 'code changes'; git push  origin circleci-project-setup"
+      - run: git config --global user.name "etivvenkata"
+      - run: git config --global user.email "etivvenkata@gmail.com"
+      - run: cd  /home/circleci/etivvenkata.github.io; ls
+     
+      - run:  ./giggle > index.html ; cat index.html
+      - run: git add --all; git commit -m "code changes"; git push  origin circleci-project-setup
 
       
 
