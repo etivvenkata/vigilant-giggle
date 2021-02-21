@@ -37,9 +37,9 @@ jobs:
       - run: "sudo mkdir -p /giggle/usr/bin/"
       - run: "cd; sudo cp  /home/circleci/project/giggle /giggle/usr/bin"
       - run: "cd;
-              sudo dpkg-deb --build /giggle;
+              sudo dpkg-deb --build /giggle; pwd;
               ls;
-              sudo mv /giggle.deb /giggle-1.0_amd64.deb"
+              sudo mv /giggle.deb /giggle-1.0_amd64.deb;pwd"
       - run: "sudo mkdir Venkata; pwd"    
 
       - run: "cd /home/circleci/project; git clone https://github.com/etivvenkata/etivvenkata.github.io.git ; ls ; pwd"
