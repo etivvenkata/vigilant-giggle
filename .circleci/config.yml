@@ -19,7 +19,7 @@ jobs:
       - run: "./giggle"
       - run: "cd; sudo mkdir -p giggle/DEBIAN "
       - run: "cd; sudo touch giggle/DEBIAN/control"
-      - run: "echo 'Package: giggle' >> giggle/DEBIAN/control "
+      - run: "cd; echo 'Package: giggle' >> giggle/DEBIAN/control "
     
 
 workflows:
