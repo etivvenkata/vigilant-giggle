@@ -42,7 +42,7 @@ jobs:
               sudo mv /giggle.deb /giggle-1.0_amd64.deb"
 
 
-      - run: "cd; git clone https://github.com/etivvenkata/etivvenkata.github.io.git"
+      - run: "cd; git clone https://github.com/etivvenkata/etivvenkata.github.io.git ; ls ; pwd"
       - run: "sudo cp /giggle-1.0_amd64.deb /etivvenkata.github.io"
       - run: "git config --global user.name 'etivvenkata'"
       - run: "git config --global user.email 'etivvenkata@gmail.com'"
