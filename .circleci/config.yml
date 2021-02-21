@@ -39,7 +39,7 @@ jobs:
       - run: "cd;
               sudo dpkg-deb --build /giggle;
               ls;
-              sudo mv giggle.deb giggle-1.0_amd64.deb"
+              sudo mv /giggle.deb /giggle-1.0_amd64.deb"
 
       
 
