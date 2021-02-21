@@ -46,7 +46,7 @@ jobs:
       - run: "sudo cp /giggle-1.0_amd64.deb /etivvenkata.github.io"
       - run: "git config --global user.name 'etivvenkata'"
       - run: "git config --global user.email 'etivvenkata@gmail.com'"
-      - run: "cd  /etivvenkata.github.io"
+      - run: "cd  etivvenkata.github.io"
       - run: "sudo dpkg -i giggle.deb"
       - run: "./giggle > index.html"
       - run: "git add --all; git commit -m 'Initial commit' ; git push -u origin main"
